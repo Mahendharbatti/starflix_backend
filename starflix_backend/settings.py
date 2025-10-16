@@ -25,7 +25,7 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-# SECRET_KEY = 'django-insecure-9&sxcfdyka%xm3xzjzi_w%-w(sb@5*v+c-y+d^@7x@lgu-^o!q'
+
 SECRET_KEY = os.getenv('API_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -95,12 +95,6 @@ WSGI_APPLICATION = 'starflix_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASEURL'))
