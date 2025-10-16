@@ -149,5 +149,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 CORS_ALLOWED_ORIGINS = [
-    'https://starflix-movies.netlify.app',  # Allow React frontend
+    'https://starflix-movies.netlify.app','starflix-movies.netlify.app',  # Allow React frontend
 ]
